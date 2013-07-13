@@ -1,61 +1,79 @@
 % Factorization diagrams
 
     [BLOpts]
-    profile    = mlt
     page       = true
     tags       = factorization, diagrams, visualization, beauty, recursion
     categories = arithmetic, counting, geometry, links, "number theory", pattern, pictures, primes
 
-XXX insert some diagrams!
+```{.dia width='400'}
+import Diagrams.TwoD.Factorization
+
+dia = fdGrid [[30..36]]
+```
 
 This page collects information and links about *factorization
-diagrams*, which you can
-[read about here](http://mathlesstraveled.com/2012/10/05/factorization-diagrams/)
-and
-[also here](http://mathlesstraveled.com/2012/11/05/more-factorization-diagrams/)---as
+diagrams*, as
 [seen on Hacker News](https://news.ycombinator.com/item?id=4620071)
-and [the cover of Hacker Monthly #31](http://hackermonthly.com/issue-31.html).
+and
+[the cover of Hacker Monthly #31](http://hackermonthly.com/issue-31.html).
 
 About
 -----
 
-XXX short explanation, with pictures.
+The basic idea is to draw $n$ dots using a recursive layout based on
+the prime factorization of $n$---for example, $30 = 2 \times 3 \times
+5$ can be drawn as two groups of three groups of five dots, like this:
 
-Make your own
--------------
+```{.dia width='200' height='200'}
+import Diagrams.TwoD.Factorization
+
+dia = factorDiagram 30
+```
+
+You can read a
+[full explanation here](http://mathlesstraveled.com/2012/10/05/factorization-diagrams/)
+and
+[also here](http://mathlesstraveled.com/2012/11/05/more-factorization-diagrams/).
+
+Awesome high-quality factorization diagrams you can buy!
+--------------------------------------------------------
+
+Coming soon!
+
+Make your own!
+--------------
 
 All the factorization diagram images are generated using
 [diagrams](http://projects.haskell.org/diagrams), a domain-specific
 language for vector graphics embedded in
 [Haskell](http://www.haskell.org/haskellwiki/Haskell).  Generating
 factorization diagrams can be accomplished using the
-[`Diagrams.TwoD.Factorization` module](http://hackage.haskell.org/packages/archive/diagrams-contrib/0.6.1/doc/html/Diagrams-TwoD-Factorization.html)
+[`Diagrams.TwoD.Factorization` module](http://hackage.haskell.org/packages/archive/diagrams-contrib/latest/doc/html/Diagrams-TwoD-Factorization.html)
 from the `diagrams-contrib` package; the
 [source code can be found here](https://github.com/diagrams/diagrams-contrib/blob/master/src/Diagrams/TwoD/Factorization.hs).
-
-XXX need to put poster source code somewhere.  Make a repo for FD
-stuff, with
-  + HM stuff
-  + poster
-  + cards (once we make those)
-
 
 Links
 -----
 
-Inspirations:
+Some of my original inspirations were
+[Sondra Eklund's awesome sweater](http://sonderbooks.com/blog/?p=843)
+and [blanket](http://sonderbooks.com/blog/?cat=206) and also
+[Richard Evan Scwartz's fun book](http://www.amazon.com/Count-Monsters-Richard-Evan-Schwartz/dp/1568815786).
 
-http://sonderbooks.com/blog/?p=843
-http://sonderbooks.com/blog/?cat=206
-http://www.amazon.com/Count-Monsters-Richard-Evan-Schwartz/dp/1568815786
+Here's a list of stuff that other people were inspired to make (if you
+know of something that should be on this list but isn't, please let me know!):
 
-Other stuff:
+* [factorization diagrams in JavaScript, with editable source code, by Jon Palin](http://jsfiddle.net/FEKX2/3/)
+* [another JavaScript version, with D3.js, by Jason Davies](http://www.jasondavies.com/factorisation-diagrams/)
+* [variant prime factorization trees by Suhas Mathur](http://thebayesianobserver.wordpress.com/2012/10/07/factor-diagrams/)
+* [animated factor diagrams by Sean Seefried](http://seanseefried.com/factor-diagrams/)
+* [animated "factor conga" by Stephen von Worley](http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/)
+* [playing "factor dominos" with factorization diagram cards, by Malke Rosenfeld](http://mathinyourfeet.blogspot.com/2012/11/new-math-game-factor-dominoes.html)
 
-http://jsfiddle.net/FEKX2/3/
-http://blog.jgc.org/2012/04/make-your-own-prime-factorization.html
-http://www.jasondavies.com/factorisation-diagrams/
-http://thebayesianobserver.wordpress.com/2012/10/07/factor-diagrams/
-http://seanseefried.com/factor-diagrams/
-http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/
-http://mathinyourfeet.blogspot.com/2012/11/new-math-game-factor-dominoes.html
+License
+-------
 
+ <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Factorization diagrams</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.mathlesstraveled.com/factorization" property="cc:attributionName" rel="cc:attributionURL">Brent Yorgey</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+
+Source code for this web site and the posters can be found
+[in this repository on github](http://github.com/byorgey/factorization-diagrams).
