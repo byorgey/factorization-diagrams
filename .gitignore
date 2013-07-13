@@ -11,3 +11,5 @@ dist_*
 history
 TAGS
 .diagrams-cache
+web/*.html
+web/diagrams/*
