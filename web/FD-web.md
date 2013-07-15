@@ -40,7 +40,11 @@ and
 Awesome high-quality factorization diagrams you can buy!
 --------------------------------------------------------
 
-Coming soon!
+You can now
+[buy high-quality factorization diagram posters](http://www.imagekind.com/GalleryProfile.aspx?GID=b5a3c5b8-114e-48fb-a640-c6da98e9a331&P=1).
+XXX write more about this here.  Link to source code, and
+images. Explain that I marked them up a bit which I plan to put
+towards future factorization diagram projects (e.g. cards)
 
 Make your own!
 --------------
