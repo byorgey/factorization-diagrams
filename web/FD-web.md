@@ -1,6 +1,8 @@
 % Factorization diagrams
 
     [BLOpts]
+    profile    = mlt
+    postid     = 2208
     page       = true
     tags       = factorization, diagrams, visualization, beauty, recursion
     categories = arithmetic, counting, geometry, links, "number theory", pattern, pictures, primes
@@ -30,10 +32,10 @@ import Diagrams.TwoD.Factorization
 dia = factorDiagram 30
 ```
 
-You can read a
-[full explanation here](http://mathlesstraveled.com/2012/10/05/factorization-diagrams/)
+A full explanation can be found
+[starting here](http://mathlesstraveled.com/2012/10/05/factorization-diagrams/)
 and
-[also here](http://mathlesstraveled.com/2012/11/05/more-factorization-diagrams/).
+[continuing here](http://mathlesstraveled.com/2012/11/05/more-factorization-diagrams/).
 
 Awesome high-quality factorization diagrams you can buy!
 --------------------------------------------------------
@@ -73,7 +75,8 @@ know of something that should be on this list but isn't, please let me know!):
 License
 -------
 
- <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Factorization diagrams</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.mathlesstraveled.com/factorization" property="cc:attributionName" rel="cc:attributionURL">Brent Yorgey</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+ <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Factorization diagrams</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.mathlesstraveled.com/factorization" property="cc:attributionName" rel="cc:attributionURL">Brent Yorgey</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 
-Source code for this web site and the posters can be found
-[in this repository on github](http://github.com/byorgey/factorization-diagrams).
+The source code for this page and other things related to
+factorization diagrams can be
+[found on github](http://github.com/byorgey/factorization-diagrams).
