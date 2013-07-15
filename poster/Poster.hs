@@ -140,7 +140,7 @@ footer =
 -- Main poster
 ----------------------------------------------------------------------
 
-grid = fdGrid (chunksOf 10 $ [1..120])
+grid = fdGrid' (chunksOf 10 $ [1..120])
 
 fdGrid' = vcat . map hcat . (map . map) (enbox 1 . factorDiagram)
 
@@ -159,5 +159,5 @@ poster =
 
 -- main = defaultMain colorScheme
 
-main = defaultMain (poster # centerXY # pad 1.1)
+main = defaultMain (poster # centerXY # pad 1.1 # bg white)
 
