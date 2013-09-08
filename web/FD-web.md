@@ -75,6 +75,7 @@ know of something that should be on this list but isn't, please let me know!):
 * [animated factor diagrams by Sean Seefried](http://seanseefried.com/factor-diagrams/)
 * [animated "factor conga" by Stephen von Worley](http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/)
 * [playing "factor dominos" with factorization diagram cards, by Malke Rosenfeld](http://mathinyourfeet.blogspot.com/2012/11/new-math-game-factor-dominoes.html)
+* [factorization diagram calculator and game, by Robert Woodley](http://rwoodley.org/?p=492)
 
 License
 -------
