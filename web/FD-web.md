@@ -50,7 +50,9 @@ be reasonable too though at that size it gets hard to see the finest
 detail.  Of course you can also go bigger; 48\"x31\" ($44) could be a good
 size for a classroom, common area, or something like that.
 
-![](Poster-small.png)
+ <div style="text-align: center;">
+[![](Poster-small.png)](http://www.imagekind.com/artists/byorgey/factorization/)
+ </div>
 
 Here's a link to the
 [source code for the poster](https://github.com/byorgey/factorization-diagrams/blob/master/poster/Poster.hs)
