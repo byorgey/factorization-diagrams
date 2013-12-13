@@ -41,10 +41,24 @@ Awesome high-quality factorization diagrams you can buy!
 --------------------------------------------------------
 
 You can now
-[buy high-quality factorization diagram posters](http://www.imagekind.com/GalleryProfile.aspx?GID=b5a3c5b8-114e-48fb-a640-c6da98e9a331&P=1).
-XXX write more about this here.  Link to source code, and
-images. Explain that I marked them up a bit which I plan to put
-towards future factorization diagram projects (e.g. cards)
+[buy high-quality, printed-on-demand factorization diagram posters](http://www.imagekind.com/artists/byorgey/factorization/)
+from imagekind!  The print quality is fantastic, and you can choose
+from a wide range of sizes, paper types, and even (if you like)
+frames.  I think 32\"x20\" is the ideal size ($26 on matte paper);
+24\"x15\" ($17) might
+be reasonable too though at that size it gets hard to see the finest
+detail.  Of course you can also go bigger; 48\"x31\" ($44) could be a good
+size for a classroom, common area, or something like that.
+
+Here's a link to the
+[source code for the poster](https://github.com/byorgey/factorization-diagrams/blob/master/poster/Poster.hs)
+as well as a
+[high-resolution PNG](https://github.com/byorgey/factorization-diagrams/blob/master/poster/Poster-nogrid.png)
+(6000x9405, 4MB).  The source code and image are both licensed under a
+[Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/),
+so feel free to modify the code as you like (see below), download the
+image and print your own poster if you have access to a high-quality
+large-format printer, and so on.
 
 Make your own!
 --------------
@@ -62,9 +76,9 @@ Links
 -----
 
 Some of my original inspirations were
-[Sondra Eklund's awesome sweater](http://sonderbooks.com/blog/?p=843)
+[Sondra Eklund's awesome prime factorization sweater](http://sonderbooks.com/blog/?p=843)
 and [blanket](http://sonderbooks.com/blog/?cat=206) and also
-[Richard Evan Scwartz's fun book](http://www.amazon.com/Count-Monsters-Richard-Evan-Schwartz/dp/1568815786).
+[Richard Evan Schwartz's fun book, You Can Count on Monsters](http://www.amazon.com/Count-Monsters-Richard-Evan-Schwartz/dp/1568815786).
 
 Here's a list of stuff that other people were inspired to make (if you
 know of something that should be on this list but isn't, please let me know!):
@@ -76,6 +90,7 @@ know of something that should be on this list but isn't, please let me know!):
 * [animated "factor conga" by Stephen von Worley](http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/)
 * [playing "factor dominos" with factorization diagram cards, by Malke Rosenfeld](http://mathinyourfeet.blogspot.com/2012/11/new-math-game-factor-dominoes.html)
 * [factorization diagram calculator and game, by Robert Woodley](http://rwoodley.org/?p=492)
+* [factorization diagrams posters, by Jeremy](http://members.peak.org/~jeremy/factordiagrams/)
 
 License
 -------
