@@ -21,13 +21,19 @@ text' d s = (stroke $ textSVG' (TextOpts s lin2 INSIDE_H KERN False d d))
 hsep s = hcat' with {sep = s}
 vsep s = vcat' with {sep = s}
 
+posterColors = [blend 0.1 white black,red,orange,yellow,green,blue,gray,purple,white,brown]
+
+myFD' = centerXY . foldr (primeLayout posterColors) (circle 1 # fc black)
+
+myFD = myFD' . concatMap (uncurry $ flip replicate) . factorise
+
 ----------------------------------------------------------------------
 -- Showing how factorization diagrams are built up recursively
 ----------------------------------------------------------------------
 
 -- Abstract schematic
 
-arrow l = hrule l # alignR <> triangle 0.5 # rotateBy (-1/4) # fc black # scaleY 0.5
+myarrow l = hrule l # alignR <> triangle 0.5 # rotateBy (-1/4) # fc black # scaleY 0.5
 
 abstract x =
   hsep 1
@@ -35,14 +41,14 @@ abstract x =
     [ n # mkBox 2
     , text' 1 "n"
     ] # alignB # translateY (-2)
-  , arrow 2
+  , myarrow 2
   , vsep 0.5
-    [ timesN x # mkBox 3
+    [ times x # mkBox 3
     , text' 1 (show x ++ "×n")
     ] # alignB # translateY (-2)
   ]
 
-timesN p = primeLayout defaultColors p n
+times p = primeLayout posterColors p n
 
 n =
   text' 2 "n" # italic
@@ -69,7 +75,7 @@ showStep ps =
   |||
   strutX 0.5
   |||
-  factorDiagram' ps # mkBox 1
+  myFD' ps # mkBox 1
 
 mkBox r d = d # sized (Dims r r) <> square r # lw 0
 
@@ -90,13 +96,13 @@ recursion =
 -- Explain the color scheme
 ----------------------------------------------------------------------
 
-showDefaultColors = hcat $ zipWith showColor defaultColors [0..]
+showColors = hcat $ zipWith showColor posterColors [0..]
   where
     showColor c d = text' 2 (show d) <> square 1 # fc c # lw 0
 
 showPrimeColors p =
     vsep 0.3
-    [ factorDiagram p # mkBox 2
+    [ myFD p # mkBox 2
     , text' 1 (show p)
     ]
   where
@@ -108,7 +114,7 @@ showPrimeColors p =
 
 colorScheme =
   vsep 1
-  [ showDefaultColors # centerXY
+  [ showColors # centerXY
   , hsep 1
     [ showPrimeColors 17
     , showPrimeColors 43
@@ -142,7 +148,7 @@ footer =
 
 grid = fdGrid' (chunksOf 10 $ [1..120])
 
-fdGrid' = vcat . map hcat . (map . map) (enbox 1 . factorDiagram)
+fdGrid' = vcat . map hcat . (map . map) (enbox 1 . myFD)
 
 enbox n d = d # centerXY # sized (Dims (0.8*n) (0.8*n)) <> square n # lw 0
 
@@ -156,8 +162,6 @@ poster =
 ----------------------------------------------------------------------
 -- Main
 ----------------------------------------------------------------------
-
--- main = defaultMain colorScheme
 
 main = defaultMain (poster # centerXY # pad 1.1 # bg white)
 
