@@ -64,6 +64,13 @@ so feel free to modify the code as you like (see below), download the
 image and print your own poster if you have access to a high-quality
 large-format printer, and so on.
 
+Factorization diagram cards!
+----------------------------
+
+Factorization diagram cards are coming soon, check out this video:
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/2wVa2DsA-nI" frameborder="0" allowfullscreen></iframe>
+
 Make your own!
 --------------
 
