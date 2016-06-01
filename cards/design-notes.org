@@ -1,0 +1,10 @@
+* Things to tweak after first iteration (May 2016)
+
+  - Add a card with info like my name, the web address
+  - underline primes?
+  - saturate colors
+  - choose other colors
+  - prime circles have shapes in them for ones digit
+  - special case for 3 with dots, smaller dots around triangle (so no
+    overlap) --- does this need to extend to other cases?  triangle
+    with pairs (i.e. 6)?
