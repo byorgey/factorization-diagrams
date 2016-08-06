@@ -42,12 +42,30 @@ card Back n ps = cardBack n ps
 sideTag :: Side -> String
 sideTag s = "[" ++ (map toLower . show $ s) ++ "]"
 
+cardSize :: SizeSpec V2 Double
+cardSize = dims2D 1125 1125
+
+renderInfoCard = do
+  forM_ [Face, Back] $ \side ->
+    renderRasterific
+      ("info" ++ sideTag side ++ ".png")
+      cardSize
+      (infoCard side # frame 0.1)
+  where
+    infoCard Face = vsep 0.1 . map centerX $
+      [ "© Brent Yorgey 2016" # text' 0.2
+      , "CC 3.0-Attribution" # text' 0.15
+      , "mathlesstraveled.com/factorization" # text' 0.15
+      ]
+    infoCard Back = mempty
+
 main :: IO ()
-main =
+main = do
+  renderInfoCard
   forM_ [1..30] $ \n ->
     forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
       forM_ [Face, Back] $ \side ->
         renderRasterific
           (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
-          (dims2D 1125 1125)
+          cardSize
           (card side n ps)

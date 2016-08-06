@@ -117,8 +117,7 @@ primeThing colors p r
 --
 --   <<diagrams/src_Diagrams_TwoD_Factorization_showDefaultColors.svg#diagram=showDefaultColors&height=50>>
 defaultColors :: [Colour Double]
-defaultColors = map (blend 0.1 white)
-  [black,red,orange,yellow,green,blue,gray,purple,white,brown]
+defaultColors = [black,red,orange,yellow,green,blue,gray,purple,white,brown]
 
 -- | Create a centered factorization diagram from the given list of
 --   factors (intended to be primes, but again, any positive integers
