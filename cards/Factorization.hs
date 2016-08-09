@@ -27,6 +27,8 @@ import           Data.List.Split  (chunksOf)
 import           Data.Maybe       (listToMaybe)
 import           Diagrams.Prelude
 
+import           Data.Colour.SRGB (sRGB24)
+
 -- | @primeLayout@ takes a positive integer p (the idea is for it to
 --   be prime, though it doesn't really matter) and a diagram, and lays
 --   out p rotated copies of the diagram in a circular pattern.
@@ -96,20 +98,39 @@ primeThing colors p r
              # lw none
   | otherwise
     = mconcat
-      [ mconcat
-        [ circle r
-        , circle (0.8 * r) # reversePath
-        ]
-        # strokeP
-        # fc (colors !! fromIntegral (p `div` 10))
-      , circle (0.6 * r)
-        # fc (colors !! fromIntegral (p `mod` 10))
+      [ ring (fromIntegral (p `div` 10))
+      , unitThing colors (p `mod` 10) (0.6 * r)
       ]
       # lw none
   where
     poly = polygon (with & polyType   .~ PolyRegular (fromIntegral p) r
                          & polyOrient .~ OrientH
                    )
+    ring 1 = mconcat
+      [ circle r
+      , circle (0.8 * r) # reversePath
+      ]
+      # strokeP
+      # fc (colors !! 1)
+    ring n = mconcat . iterateN n (rotate nTurn) $ seg
+      where
+        gap = 1/30 @@ turn
+        nTurn = 1/fromIntegral n @@ turn
+        seg =
+          annularWedge r (0.8*r)
+            (yDir # rotate (0.5 *^ gap))
+            (nTurn ^-^ gap)
+          # strokeP
+          # fc (colors !! fromIntegral n)
+
+
+unitThing colors 1 r = circle r # fc (colors !! 1) # lw none
+unitThing colors p r
+  | p `elem` [3, 7]  = primeThing colors p r
+unitThing colors 9 r = (t === centerX (t ||| t)) # alignY (-1/3)
+  where
+    t = primeThing colors 3 (r/2)
+unitThing _      n _ = error $ "Impossible: prime ending with " ++ show n
 
 -- | A default set of digit colors, based very loosely on the color
 --   code for resistors (<http://en.wikipedia.org/wiki/Electronic_color_code>),
@@ -117,7 +138,25 @@ primeThing colors p r
 --
 --   <<diagrams/src_Diagrams_TwoD_Factorization_showDefaultColors.svg#diagram=showDefaultColors&height=50>>
 defaultColors :: [Colour Double]
-defaultColors = [black,red,orange,yellow,green,blue,gray,purple,white,brown]
+defaultColors =
+  [ black
+  , gray
+  , colorScheme !! 1
+  , colorScheme !! 2
+  , gray
+  , colorScheme !! 3
+  , gray
+  , colorScheme !! 0
+  , gray
+  , gray
+  ]
+
+colorScheme :: [Colour Double]
+colorScheme = [ sRGB24 0xff 0x0d 0x00
+              , sRGB24 0xff 0x7c 0x00
+              , sRGB24 0x03 0x8f 0xa9
+              , sRGB24 0x00 0xcc 0x19
+              ]
 
 -- | Create a centered factorization diagram from the given list of
 --   factors (intended to be primes, but again, any positive integers
