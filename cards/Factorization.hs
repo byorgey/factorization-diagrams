@@ -96,6 +96,7 @@ primeThing colors p r
   | p < 10 = strokeP poly
              # fc (colors!!(fromIntegral p `mod` 10))
              # lw none
+             # if (p == 3) then rotateBy (1 / (fromIntegral p * 2)) else id
   | otherwise
     = mconcat
       [ ring (fromIntegral (p `div` 10))
@@ -127,7 +128,7 @@ primeThing colors p r
 unitThing colors 1 r = circle r # fc (colors !! 1) # lw none
 unitThing colors p r
   | p `elem` [3, 7]  = primeThing colors p r
-unitThing colors 9 r = (t === centerX (t ||| t)) # alignY (-1/3)
+unitThing colors 9 r = (centerX (t ||| t) === t) # alignY (1/3)
   where
     t = primeThing colors 3 (r/2)
 unitThing _      n _ = error $ "Impossible: prime ending with " ++ show n
@@ -140,23 +141,39 @@ unitThing _      n _ = error $ "Impossible: prime ending with " ++ show n
 defaultColors :: [Colour Double]
 defaultColors =
   [ black
-  , gray
-  , colorScheme !! 1
+  , colorScheme !! 0
   , colorScheme !! 2
-  , gray
   , colorScheme !! 3
   , gray
-  , colorScheme !! 0
+  , colorScheme !! 1
+  , gray
+  , colorScheme !! 4
   , gray
   , gray
   ]
 
+-- colorScheme :: [Colour Double]
+-- colorScheme = [ sRGB24 0xff 0x0d 0x00
+--               , sRGB24 0xff 0x7c 0x00
+--               , sRGB24 0x03 0x8f 0xa9
+--               , sRGB24 0x00 0xcc 0x19
+--               ]
+
+-- Generated using coolers.co,
+-- https://coolors.co/a4036f-0061ff-33a1fd-fdca40-f78800
 colorScheme :: [Colour Double]
-colorScheme = [ sRGB24 0xff 0x0d 0x00
-              , sRGB24 0xff 0x7c 0x00
-              , sRGB24 0x03 0x8f 0xa9
-              , sRGB24 0x00 0xcc 0x19
+colorScheme = [ flirt
+              , brandeisBlue
+              , brilliantAzure
+              , sunglow
+              , tangerine
               ]
+  where
+    flirt          = sRGB24 0xa4 0x03 0x6f
+    brandeisBlue   = sRGB24 0x00 0x61 0xff
+    brilliantAzure = sRGB24 0x33 0xa1 0xfd
+    sunglow        = sRGB24 0xfd 0xca 0x40
+    tangerine      = sRGB24 0xf7 0x88 0x00
 
 -- | Create a centered factorization diagram from the given list of
 --   factors (intended to be primes, but again, any positive integers
