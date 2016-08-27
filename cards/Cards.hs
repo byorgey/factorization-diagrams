@@ -55,7 +55,7 @@ renderInfoCard = do
     renderRasterific
       ("info" ++ sideTag side ++ ".png")
       cardSize
-      (infoCard side # frame 0.1)
+      (infoCard side # frame 0.2)
   where
     infoCard Face = vsep 0.1 . map centerX $
       [ "© Brent Yorgey 2016" # text' 0.2
