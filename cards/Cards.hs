@@ -47,6 +47,9 @@ sideTag s = "[" ++ (map toLower . show $ s) ++ "]"
 cardSize :: SizeSpec V2 Double
 cardSize = dims2D 1125 1125
 
+cardSizeSmall :: SizeSpec V2 Double
+cardSizeSmall = dims2D 400 400
+
 renderInfoCard = do
   forM_ [Face, Back] $ \side ->
     renderRasterific
