@@ -56,8 +56,9 @@ renderInfoCard = do
   where
     infoCard Face = vsep 0.1 . map centerX $
       [ "© Brent Yorgey 2016" # text' 0.2
-      , "CC 3.0-Attribution" # text' 0.15
+      , "CC BY 3.0 license" # text' 0.15
       , "mathlesstraveled.com/factorization" # text' 0.15
+      , "rev 1, 27.8.16" # text' 0.15
       ]
     infoCard Back = mempty
 
