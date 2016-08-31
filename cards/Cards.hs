@@ -48,17 +48,21 @@ cardSize :: SizeSpec V2 Double
 cardSize = dims2D 1125 1125
 -- cardSize = dims2D 400 400
 
+cardSizeSmall :: SizeSpec V2 Double
+cardSizeSmall = dims2D 400 400
+
 renderInfoCard = do
   forM_ [Face, Back] $ \side ->
     renderRasterific
       ("info" ++ sideTag side ++ ".png")
       cardSize
-      (infoCard side # frame 0.1)
+      (infoCard side # frame 0.2)
   where
     infoCard Face = vsep 0.1 . map centerX $
       [ "© Brent Yorgey 2016" # text' 0.2
-      , "CC 3.0-Attribution" # text' 0.15
+      , "CC BY 3.0 license" # text' 0.15
       , "mathlesstraveled.com/factorization" # text' 0.15
+      , "rev 1, 27.8.16" # text' 0.15
       ]
     infoCard Back = mempty
 
