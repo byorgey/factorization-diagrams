@@ -3,6 +3,7 @@
     [BLOpts]
     profile    = mlt
     postid     = 2208
+    publish    = true
     page       = true
     tags       = factorization, diagrams, visualization, beauty, recursion
     categories = arithmetic, counting, geometry, links, "number theory", pattern, pictures, primes
@@ -37,8 +38,46 @@ A full explanation can be found
 and
 [continuing here](http://mathlesstraveled.com/2012/11/05/more-factorization-diagrams/).
 
-Awesome high-quality factorization diagrams you can buy!
---------------------------------------------------------
+Factorization diagram cards!
+----------------------------
+
+**[Factorization diagram cards are now here](https://www.thegamecrafter.com/games/factorization-diagram-cards-1-30-)**!
+You can purchase a print-on-demand deck from
+[The Game Crafter](https://www.thegamecrafter.com/games/factorization-diagram-cards-1-30-)
+for $13.99.  I am selling them basically at cost; the price reflects
+the high quality of the cards and the fact that they are
+print-on-demand, so there are no economy of scale effects.  If you are a
+game/educational publisher, or know one, who would be interested in
+publishing this deck and making it available at a lower price, please
+contact me!
+
+![](webcards.png)
+
+Each deck contains 54 large (3.5"), high-quality square cards with a
+matte finish that reduces glare.  The front of each card has a
+diagram, and the back has the corresponding number and factorization.
+Numbers with multiple distinct prime factors have multiple cards with
+different diagrams, one for each distinct permutation of the prime
+factors.
+
+Let me know if you would be interested in a deck with the numbers 31-60!
+
+The
+[images used to make the cards are freely available here](http://ozark.hendrix.edu/~yorgey/hosted/factorization-cards.tgz).
+Let me know if you would be interested in a different format, *e.g.* a
+PDF with four cards per page, for easier printing and cutting out.  I
+may get around to making such a thing eventually.
+
+You can
+[read about the redesigned version of the cards here](https://mathlesstraveled.com/2016/08/24/factorization-diagram-card-redesign-feedback-welcome/).
+And here is the video from when I got the first printing of the first
+version of the cards.  The colors and design are now a bit different,
+but it should give you a sense for the size and quality of the cards:
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/2wVa2DsA-nI" frameborder="0" allowfullscreen></iframe>
+
+Posters!
+--------
 
 You can now
 [buy high-quality, printed-on-demand factorization diagram posters](http://www.imagekind.com/artists/byorgey/factorization/)
@@ -63,13 +102,6 @@ as well as a
 so feel free to modify the code as you like (see below), download the
 image and print your own poster if you have access to a high-quality
 large-format printer, and so on.
-
-Factorization diagram cards!
-----------------------------
-
-Factorization diagram cards are coming soon, check out this video:
-
- <iframe width="560" height="315" src="https://www.youtube.com/embed/2wVa2DsA-nI" frameborder="0" allowfullscreen></iframe>
 
 Make your own!
 --------------
