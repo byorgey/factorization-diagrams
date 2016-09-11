@@ -20,6 +20,16 @@ diagrams*, as
 and
 [the cover of Hacker Monthly #31](http://hackermonthly.com/issue-31.html).
 
+ <div style="text-align:center; border: 2px solid black; border-radius: 5px">
+![](6f.png){style="float: left"}
+![](6b.png){style="float: right"}
+ <br />
+[**Click here to buy factorization diagram cards!**](https://www.thegamecrafter.com/games/factorization-diagram-cards-1-30-) <br />
+(or read more below)
+ <br />
+ <br clear="all" />
+ </div>
+
 About
 -----
 
@@ -44,12 +54,12 @@ Factorization diagram cards!
 **[Factorization diagram cards are now here](https://www.thegamecrafter.com/games/factorization-diagram-cards-1-30-)**!
 You can purchase a print-on-demand deck from
 [The Game Crafter](https://www.thegamecrafter.com/games/factorization-diagram-cards-1-30-)
-for $13.99.  I am selling them basically at cost; the price reflects
-the high quality of the cards and the fact that they are
-print-on-demand, so there are no economy of scale effects.  If you are a
-game/educational publisher, or know one, who would be interested in
-publishing this deck and making it available at a lower price, please
-contact me!
+for $13.99.  I am selling them basically at cost; the moderately high
+price reflects the high quality of the cards and the fact that they
+are print-on-demand, so there are no economy of scale effects.  If you
+are a game/educational publisher, or know one, who would be interested
+in publishing this deck and making it available at a lower price,
+please contact me!
 
 ![](webcards.png)
 
@@ -60,13 +70,24 @@ Numbers with multiple distinct prime factors have multiple cards with
 different diagrams, one for each distinct permutation of the prime
 factors.
 
-Let me know if you would be interested in a deck with the numbers 31-60!
+* Let me know if you would be interested in a deck with the numbers
+  31-60!
+* **If you use them in a classroom and come up with a fun
+  activity/game/challenge using the cards, please let me know**!  I
+  would like to collect a big list of suggested activities for
+  different ages and eventually be able to publish the list along with
+  the cards.
 
 The
-[images used to make the cards are freely available here](http://ozark.hendrix.edu/~yorgey/hosted/factorization-cards.tgz).
-Let me know if you would be interested in a different format, *e.g.* a
-PDF with four cards per page, for easier printing and cutting out.  I
-may get around to making such a thing eventually.
+[images used to make the cards are freely available here](http://ozark.hendrix.edu/~yorgey/hosted/factorization-cards.tgz),
+and the
+[source code is on github](https://github.com/byorgey/factorization-diagrams/tree/master/cards).
+Everything is released under a
+[Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/).
+
+Let me know if you would be interested in a different downloadable
+format, *e.g.* a PDF with four cards per page, for easier printing and
+cutting out.  I may get around to making such a thing eventually.
 
 You can
 [read about the redesigned version of the cards here](https://mathlesstraveled.com/2016/08/24/factorization-diagram-card-redesign-feedback-welcome/).
