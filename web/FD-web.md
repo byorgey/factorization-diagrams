@@ -144,7 +144,18 @@ Some of my original inspirations were
 and [blanket](http://sonderbooks.com/blog/?cat=206) and also
 [Richard Evan Schwartz's fun book, You Can Count on Monsters](http://www.amazon.com/Count-Monsters-Richard-Evan-Schwartz/dp/1568815786).
 
-Here's a list of stuff that other people were inspired to make (if you
+Here's a complete list of blog posts I have published related to
+factorization diagrams:
+
+* [Factorization diagrams](https://mathlesstraveled.com/2012/10/05/factorization-diagrams/)
+* [More factorization diagrams](https://mathlesstraveled.com/2012/11/05/more-factorization-diagrams/)
+* [Factorization diagram cards: help?](https://mathlesstraveled.com/2013/02/05/factorization-diagram-cards-help/)
+* [Factorization diagram posters!](https://mathlesstraveled.com/2013/12/13/factorization-diagram-posters-2/)
+* [Factorization diagram cards!](https://mathlesstraveled.com/2016/05/31/factorization-diagram-cards/)
+* [Factorization diagram card redesign: feedback welcome!](https://mathlesstraveled.com/2016/08/24/factorization-diagram-card-redesign-feedback-welcome/)
+* [Factorization diagram cards are here!](https://mathlesstraveled.com/2016/09/11/factorization-diagram-cards-are-here/)
+
+And here's a list of stuff that other people were inspired to make (if you
 know of something that should be on this list but isn't, please let me know!):
 
 * [factorization diagrams in JavaScript, with editable source code, by Jon Palin](http://jsfiddle.net/FEKX2/3/)
