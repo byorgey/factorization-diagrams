@@ -31,8 +31,15 @@ mkWebCard d = d
 webCard n Face = factorDiagram (head $ factorizations n)
 webCard n Back = cardBack n (head $ factorizations n)
 
+twelves
+  = map factorDiagram [[2,2,3], [2,3,2], [3,2,2]]
+  # map mkWebCard
+  # hsep 10
+  # frame 5
+
 main :: IO ()
 main = mainWith [ ("webCards", webCards)
                 , ("6f", webCard 6 Face # mkWebCard # frame 5)
                 , ("6b", webCard 6 Back # mkWebCard # frame 5)
+                , ("12", twelves)
                 ]
