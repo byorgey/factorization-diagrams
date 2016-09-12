@@ -64,7 +64,7 @@ please contact me!
 ![](webcards.png)
 
 Each deck contains 54 large (3.5"), high-quality square cards with a
-matte finish that reduces glare.  The front of each card has a
+linen texture and UV coating to reduce glare.  The front of each card has a
 diagram, and the back has the corresponding number and factorization.
 Numbers with multiple distinct prime factors have multiple cards with
 different diagrams, one for each distinct permutation of the prime
@@ -73,7 +73,7 @@ factors.
 * Let me know if you would be interested in a deck with the numbers
   31-60!
 * **If you use them in a classroom and come up with a fun
-  activity/game/challenge using the cards, please let me know**!  I
+  activity/game/puzzle using the cards, please let me know**!  I
   would like to collect a big list of suggested activities for
   different ages and eventually be able to publish the list along with
   the cards.
