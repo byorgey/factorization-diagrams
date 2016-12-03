@@ -1,6 +1,9 @@
 module CardsMain where
 
 import           Cards
+import           Diagrams.Backend.Rasterific
+
+import           Control.Monad
 
 main :: IO ()
 main = do
