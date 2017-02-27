@@ -1,3 +1,5 @@
+module Cards where
+
 import           Diagrams.Backend.Rasterific
 import           Diagrams.Backend.Rasterific.CmdLine
 import           Diagrams.Prelude

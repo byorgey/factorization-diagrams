@@ -141,17 +141,19 @@ unitThing _      n _ = error $ "Impossible: prime ending with " ++ show n
 defaultColors :: [Colour Double]
 defaultColors =
   [ black
-  , colorScheme !! 0
-  , colorScheme !! 2
-  , colorScheme !! 3
+  , krzywinskiColors !! 7    -- purple
+  , krzywinskiColors !! 2    -- light blue
+  , krzywinskiColors !! 4    -- yellow
   , gray
-  , colorScheme !! 1
+  , krzywinskiColors !! 5    -- dark blue
   , gray
-  , colorScheme !! 4
+  , krzywinskiColors !! 1    -- orange
   , gray
   , gray
   ]
 
+-- An old color scheme
+--
 -- colorScheme :: [Colour Double]
 -- colorScheme = [ sRGB24 0xff 0x0d 0x00
 --               , sRGB24 0xff 0x7c 0x00
@@ -174,6 +176,21 @@ colorScheme = [ flirt
     brilliantAzure = sRGB24 0x33 0xa1 0xfd
     sunglow        = sRGB24 0xfd 0xca 0x40
     tangerine      = sRGB24 0xf7 0x88 0x00
+
+-- | These colors are chosen to be easily distinguishable to people
+--   with the three most common forms of color blindness (deteranopia,
+--   protanopia, tritanopia).  http://mkweb.bcgsc.ca/colorblind/
+krzywinskiColors :: [Colour Double]
+krzywinskiColors =
+  [ black
+  , sRGB24 230 159   0   -- orange
+  , sRGB24  86 180 233   -- sky blue
+  , sRGB24   0 158 115   -- bluish green
+  , sRGB24 240 228  66   -- yellow
+  , sRGB24   0 114 178   -- blue
+  , sRGB24 213  94   0   -- vermillion
+  , sRGB24 204 121 167   -- reddish purple
+  ]
 
 -- | Create a centered factorization diagram from the given list of
 --   factors (intended to be primes, but again, any positive integers

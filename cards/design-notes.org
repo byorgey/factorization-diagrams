@@ -8,3 +8,39 @@
   - [X] special case for 3 with dots, smaller dots around triangle (so no
     overlap) --- does this need to extend to other cases?  triangle
     with pairs (i.e. 6)?
+* Email re: colors & colorblindness
+
+Hi Brent,
+
+Your factorization cards are fantastic. The colour scheme's dominant yellow
+and
+blue struck me as appropriate for deuteranopia - so I checked it with a
+simulator (Sim Daltonism).
+
+It looks like with minor adjustments the colours could be made more
+suitable to
+a wider range of colour deficient persons.
+
+I am enclosed a chart[1] by Martin Krzywinski which describes a conservative
+7-colour palette adapted for the three most common forms of colour blindness
+(deuteranopia, protanopia, tritanopia).
+
+Another set of colours you may enjoy are those as used on the Tokyo train
+timetables[2] - a tweaked set of red, green and blue to appeal to both
+regular
+and non-regular vision:
+
+Red CMYK= 0, 77, 100, 0 %
+Blue CMYK= 100, 30, 0, 0 %
+Green CMYK= 85, 0, 60, 10 %
+
+*
+
+--
+1. Color Palettes for Color Blindness
+http://mkweb.bcgsc.ca/colorblind/
+
+2. Color Universal Design
+The Selection of Four Easily Distinguishable Colors for all Color Vision
+Types
+http://jfly.iam.u-tokyo.ac.jp/color/ichihara_etal_2008.pdf
