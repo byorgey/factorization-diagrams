@@ -72,6 +72,7 @@ factors.
 
 * Let me know if you would be interested in a deck with the numbers
   31-60!
+* [Here are a few suggested games you can play with the cards](https://mathlesstraveled.com/2017/02/17/games-with-factorization-diagram-cards/), from a middle school classroom.
 * **If you use them in a classroom and come up with a fun
   activity/game/puzzle using the cards, please let me know**!  I
   would like to collect a big list of suggested activities for
