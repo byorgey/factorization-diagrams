@@ -1,5 +1,3 @@
-module Backdrop where
-
 import           Diagrams.Backend.Rasterific
 import           Diagrams.Backend.Rasterific.CmdLine
 import           Diagrams.Prelude

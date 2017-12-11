@@ -79,13 +79,13 @@ renderInfoCard = do
 --           cardSize
 --           (card side n ps)
 
-main :: IO ()
-main = [1..30]
-  # concatMap (\n -> map (card Face n) (factorizations n))
-  # chunksOf 7
-  # map (hsep 0.2)
-  # vsep 0.2
-  # sized cardSize
-  # centerXY
-  # beneath (rect 1125 1125 # lw none # fc white)
-  # renderRasterific "allCardsGrid.png" cardSize
+-- main :: IO ()
+-- main = [1..30]
+--   # concatMap (\n -> map (card Face n) (factorizations n))
+--   # chunksOf 7
+--   # map (hsep 0.2)
+--   # vsep 0.2
+--   # sized cardSize
+--   # centerXY
+--   # beneath (rect 1125 1125 # lw none # fc white)
+--   # renderRasterific "allCardsGrid.png" cardSize

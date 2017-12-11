@@ -21,5 +21,5 @@ main :: IO ()
 main =
  renderRasterific
    ("shopAd.png")
-   (dims2D 180 125)
+   (dims2D 216 150)
    shopAd
