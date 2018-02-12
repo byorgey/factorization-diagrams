@@ -167,6 +167,7 @@ know of something that should be on this list but isn't, please let me know!):
 * [playing "factor dominos" with factorization diagram cards, by Malke Rosenfeld](http://mathinyourfeet.blogspot.com/2012/11/new-math-game-factor-dominoes.html)
 * [factorization diagram calculator and game, by Robert Woodley](http://rwoodley.org/?p=492)
 * [factorization diagrams posters, by Jeremy](http://members.peak.org/~jeremy/factordiagrams/)
+* [prime factorization dot-agons](https://www.youtube.com/watch?v=XMYS5tCpVhE&feature=youtu.be) by Steven Ellis
 
 License
 -------
