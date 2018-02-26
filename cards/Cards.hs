@@ -64,20 +64,20 @@ renderInfoCard = do
       [ "© Brent Yorgey 2016" # text' 0.2
       , "CC BY 3.0 license" # text' 0.15
       , "mathlesstraveled.com/factorization" # text' 0.15
-      , "rev 1, 27.8.16" # text' 0.15
+      , "rev 2, 3.12.16" # text' 0.15
       ]
     infoCard Back = mempty
 
--- main :: IO ()
--- main = do
---   renderInfoCard
---   forM_ [1..30] $ \n ->
---     forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
---       forM_ [Face, Back] $ \side ->
---         renderRasterific
---           (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
---           cardSize
---           (card side n ps)
+main :: IO ()
+main = do
+  renderInfoCard
+  forM_ [1..30] $ \n ->
+    forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
+      forM_ [Face, Back] $ \side ->
+        renderRasterific
+          (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
+          cardSize
+          (card side n ps)
 
 -- main :: IO ()
 -- main = [1..30]
