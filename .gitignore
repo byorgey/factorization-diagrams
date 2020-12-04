@@ -4,15 +4,19 @@ cabal-dev
 *.hi
 *.chi
 *.chs.h
+*.tar
 .virthualenv
 *~
 .hsenv_*
 dist_*
+.stack-work
+stack.yaml.lock
 history
 TAGS
 .diagrams-cache
 web/*.html
 web/diagrams/*
+cards/diagrams/*
 Poster-big.png
 
 cards/imgs/

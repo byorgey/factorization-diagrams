@@ -1,5 +1,3 @@
-module CardsMain where
-
 import           Cards
 import           Diagrams.Backend.Rasterific
 
@@ -7,14 +5,22 @@ import           Control.Monad
 
 main :: IO ()
 main = do
-  renderInfoCard
-  forM_ [1..30] $ \n ->
-    forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
-      forM_ [Face, Back] $ \side ->
-        renderRasterific
-          (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
-          cardSize
-          (card side n ps)
+  forM_ [1..81] $ \n ->
+    renderRasterific
+      (show n ++ ".png")
+      cardSize
+      (card Face n (factorizationBigToSmall n))
+
+-- main :: IO ()
+-- main = do
+--   renderInfoCard
+--   forM_ [1..30] $ \n ->
+--     forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
+--       forM_ [Face, Back] $ \side ->
+--         renderRasterific
+--           (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
+--           cardSize
+--           (card side n ps)
 
 -- main :: IO ()
 -- main = [1..50]

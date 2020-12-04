@@ -9,16 +9,27 @@ import           Graphics.SVGFonts
 import           Control.Monad                          (forM_)
 import           Data.Char                              (toLower)
 import           Data.List                              (intercalate, nub,
-                                                         permutations)
+                                                         permutations, sortBy)
 import           Data.List.Split
+import           Data.Ord                               (Down (..), comparing)
 import           Math.NumberTheory.Primes.Factorisation (factorise)
 
+import           System.IO.Unsafe
+
+lin' = unsafePerformIO lin
+
 text' :: Double -> String -> Diagram B
-text' d t = stroke (textSVG' (TextOpts lin INSIDE_H KERN False d d) t) # fc black
+text' d t = stroke (textSVG' (TextOpts lin' INSIDE_H KERN False d d) t) # fc black
 
 factorizations :: Integer -> [[Integer]]
 factorizations = nub . permutations
-               . concatMap (uncurry (flip replicate)) . factorise
+               . concatMap (uncurry (flip (replicate . fromIntegral))) . factorise
+
+factorizationBigToSmall :: Integer -> [Integer]
+factorizationBigToSmall
+  = concatMap (uncurry (flip (replicate . fromIntegral)))
+  . sortBy (comparing (Down . fst))
+  . factorise
 
 cardFace :: [Integer] -> Diagram B
 cardFace = bg white . frame 0.1
@@ -68,16 +79,16 @@ renderInfoCard = do
       ]
     infoCard Back = mempty
 
-main :: IO ()
-main = do
-  renderInfoCard
-  forM_ [1..30] $ \n ->
-    forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
-      forM_ [Face, Back] $ \side ->
-        renderRasterific
-          (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
-          cardSize
-          (card side n ps)
+-- main :: IO ()
+-- main = do
+--   renderInfoCard
+--   forM_ [1..30] $ \n ->
+--     forM_ (zip [1 :: Integer ..] . factorizations $ n) $ \(i,ps) ->
+--       forM_ [Face, Back] $ \side ->
+--         renderRasterific
+--           (show n ++ "-" ++ show i ++ sideTag side ++ ".png")
+--           cardSize
+--           (card side n ps)
 
 -- main :: IO ()
 -- main = [1..30]
