@@ -204,7 +204,11 @@ krzywinskiColors =
 --   <<diagrams/src_Diagrams_TwoD_Factorization_factorDiagram'Ex.svg#diagram=factorDiagram'Ex&height=200>>
 factorDiagram :: (Renderable (Path V2 n) b, TypeableFloat n)
                => [Integer] -> QDiagram b V2 n Any
-factorDiagram = centerXY . foldr (primeLayout defaultColors) (circle 1 # fc black # lw none)
+factorDiagram = factorDiagram' defaultColors
+
+factorDiagram' :: (Renderable (Path V2 n) b, TypeableFloat n)
+               => [Colour Double] -> [Integer] -> QDiagram b V2 n Any
+factorDiagram' colors = centerXY . foldr (primeLayout colors) (circle 1 # fc (colors !! 1) # lw none)
 
 factors :: Integer -> [Integer]
 factors 1 = []
