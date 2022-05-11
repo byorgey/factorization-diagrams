@@ -1,6 +1,6 @@
 import           Cards
 import           Data.Colour.SRGB            (Colour, sRGB24)
-import           Diagrams.Backend.Rasterific
+import           Diagrams.Backend.SVG
 import           Diagrams.Prelude
 import           Factorization
 
@@ -8,13 +8,11 @@ import           Control.Monad
 
 main :: IO ()
 main = do
-  forM_ [1 .. 9] $ \m ->
-    forM_ [1 .. 9] $ \n ->
-      renderRasterific
-        (show m ++ "x" ++ show n ++ ".png")
-        cardSize
-        (cardFace' (factorizationBigToSmall m ++ factorizationBigToSmall n))
-
+  forM_ ([3^8, 3^9, 3^10] ++ [100, 200 .. 1000]) $ \n ->
+    renderSVG
+      (show n ++ ".svg")
+      cardSize
+      (cardFace' (factorizationBigToSmall n))
   where
     cardFace' = bg white . frame 0.1
          . (beneath (rect 1 1 # lw none)) . sized (dims2D 1 1)
