@@ -112,7 +112,8 @@ primeThing colors p r
       , circle (0.8 * r) # reversePath
       ]
       # strokeP
-      # fc (colors !! 1)
+      -- # fc (colors !! 0)
+      # fc (colors !! 10)   -- for numberspark
     ring n = mconcat . iterateN n (rotate nTurn) $ seg
       where
         gap = 1/30 @@ turn
@@ -122,7 +123,8 @@ primeThing colors p r
             (yDir # rotate (0.5 *^ gap))
             (nTurn ^-^ gap)
           # strokeP
-          # fc (colors !! fromIntegral n)
+          # fc (colors !! 10)   -- for numberspark
+          -- # fc (colors !! fromIntegral n)
 
 
 unitThing colors 1 r = circle r # fc (colors !! 1) # lw none

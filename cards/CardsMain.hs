@@ -8,7 +8,7 @@ import           Control.Monad
 
 main :: IO ()
 main = do
-  forM_ ([3^8, 3^9, 3^10] ++ [100, 200 .. 1000]) $ \n ->
+  forM_ [1 .. 256] $ \n ->
     renderSVG
       (show n ++ ".svg")
       cardSize
@@ -16,7 +16,7 @@ main = do
   where
     cardFace' = bg white . frame 0.1
          . (beneath (rect 1 1 # lw none)) . sized (dims2D 1 1)
-         . factorDiagram' numerosoColors
+         . factorDiagram' numbersparkColors
 
 numerosoColors :: [Colour Double]
 numerosoColors =
@@ -32,6 +32,20 @@ numerosoColors =
   , gray
   ]
 
+numbersparkColors :: [Colour Double]
+numbersparkColors =
+  [ black
+  , sRGB24 0x6A 0xFF 0xB3
+  , black
+  , sRGB24 0xFF 0xFB 0x80
+  , gray
+  , sRGB24 0x2A 0xE2 0xEC
+  , gray
+  , sRGB24 0xFF 0x98 0x6C
+  , gray
+  , gray
+  , sRGB24 0xCD 0x5C 0xFF
+  ]
 
 -- main :: IO ()
 -- main = do
