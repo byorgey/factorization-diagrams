@@ -7,28 +7,37 @@ import           Factorization
 import           Graphics.SVGFonts
 
 import           Control.Monad                          (forM_)
+import           Data.Bifunctor                         (first)
 import           Data.Char                              (toLower)
 import           Data.List                              (intercalate, nub,
                                                          permutations, sortBy)
 import           Data.List.Split
 import           Data.Ord                               (Down (..), comparing)
-import           Math.NumberTheory.Primes.Factorisation (factorise)
+import           Math.NumberTheory.Primes               (factorise, unPrime)
 
 import           System.IO.Unsafe
 
 lin' = unsafePerformIO lin
 
 text' :: Double -> String -> Diagram B
-text' d t = stroke (textSVG' (TextOpts lin' INSIDE_H KERN False d d) t) # fc black
+text' d t = t
+  # svgText def
+  # fit_height d
+  # set_envelope
+  # lw none # fc black
 
 factorizations :: Integer -> [[Integer]]
-factorizations = nub . permutations
-               . concatMap (uncurry (flip (replicate . fromIntegral))) . factorise
+factorizations
+  = nub . permutations
+  . concatMap (uncurry (flip (replicate . fromIntegral)))
+  . map (first unPrime)
+  . factorise
 
 factorizationBigToSmall :: Integer -> [Integer]
 factorizationBigToSmall
   = concatMap (uncurry (flip (replicate . fromIntegral)))
   . sortBy (comparing (Down . fst))
+  . map (first unPrime)
   . factorise
 
 cardFace :: [Integer] -> Diagram B

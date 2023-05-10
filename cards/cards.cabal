@@ -20,11 +20,11 @@ executable cards
   main-is:             CardsMain.hs
   other-modules:       Cards, Factorization
   -- other-extensions:
-  build-depends:       base >=4.11 && <4.14,
+  build-depends:       base >=4.11 && <4.19,
                        split,
                        colour,
                        SVGFonts,
-                       arithmoi,
+                       arithmoi >= 0.10,
                        diagrams-lib,
                        diagrams-rasterific,
                        diagrams-svg
